@@ -1,7 +1,7 @@
 {
-	"title"		:	"JMod",
-	"type"		:	"gamemode",
-	"tags"		:	[ "fun" ],
+	"title"		:	"PRSBOX JMod",
+	"type"		:	"ServerContent",
+	"tags"		: ["fun", "scenic", "realism"],
 	"ignore"	:
 	[
 		"*.psd",
