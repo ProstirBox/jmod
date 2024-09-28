@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Flintlock Musket"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_flm", true)
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_flm.png"
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/v_jmod_musket.mdl"
 SWEP.WorldModel = "models/weapons/w_jmod_musket.mdl"

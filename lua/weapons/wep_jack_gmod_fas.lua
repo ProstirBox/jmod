@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Fully-Automatic Shotgun"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_fas", true)
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_fas.png"
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/c_mw2_aa12_6.mdl"
 SWEP.WorldModel = "models/weapons/w_jmod_fullautoshotty.mdl"

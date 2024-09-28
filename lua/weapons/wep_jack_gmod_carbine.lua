@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Carbine"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_car", true)
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_car.png"
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/v_cod4_g36.mdl"
 SWEP.WorldModel = "models/weapons/w_jmod_g36.mdl"

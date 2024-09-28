@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Magnum Trapdoor Revolver"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_bigiron", true)
+-- SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_bigiron.png"
+-- SWEP.Spawnable = true
+-- SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 1
 SWEP.ViewModel = "models/weapons/v_reichsrevolver_verdun.mdl"
 SWEP.WorldModel = "models/weapons/w_reichsrevolver_verdun2.mdl"

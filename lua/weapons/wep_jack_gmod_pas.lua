@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Pump-Action Shotgun"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_pas", true)
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_pas.png"
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/v_cod4_w1200_c.mdl"
 SWEP.WorldModel = "models/weapons/w_jmod_w1200.mdl"

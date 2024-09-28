@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Lever-Action Carbine"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_lac", true)
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_lac.png"
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/v_win73.mdl"
 SWEP.WorldModel = "models/weapons/w_jmod_levergun.mdl"

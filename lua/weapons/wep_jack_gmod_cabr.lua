@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Cap and Ball Revolver"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_cabr", true)
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_cabr.png"
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 1
 SWEP.ViewModel = "models/krazy/gtav/weapons/navyrevolver_v.mdl"
 SWEP.WorldModel = "models/krazy/gtav/weapons/navyrevolver_w.mdl"

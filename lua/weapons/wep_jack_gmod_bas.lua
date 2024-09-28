@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Break-Action Shotgun"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_bas", true)
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_bas.png"
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 3
 SWEP.ViewModel = "models/viper/mw/weapons/725_mammaledition.mdl"
 SWEP.WorldModel = "models/weapons/w_jmod_breakshotty.mdl"

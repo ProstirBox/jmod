@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_amr.png"
 SWEP.PrintName = "Anti-Materiel Rifle"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_amr", true)
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 
 if CLIENT then
 	killicon.Add("wep_jack_gmod_amr", "entities/ent_jack_gmod_ezweapon_amr", Color(255, 0, 0))

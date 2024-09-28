@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_ar.png"
 SWEP.PrintName = "Assault Rifle"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_ar", true)
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/v_cod4_m16a4.mdl"
 SWEP.WorldModel = "models/weapons/w_jmod_m16.mdl"

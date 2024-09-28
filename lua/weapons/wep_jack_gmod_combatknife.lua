@@ -1,7 +1,10 @@
 ﻿SWEP.Base = "wep_jack_gmod_meleebase"
 SWEP.Spawnable = false
 SWEP.PrintName = "Combat Knife"
+--SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_combatknife.png"
 JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_combatknife", true)
+--SWEP.Spawnable = true
+--SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 0
 SWEP.ViewModel = "models/weapons/yurie_cod/iw7/tactical_knife_iw7_vm.mdl"
 SWEP.WorldModel = "models/weapons/w_jmod_pocketknife.mdl"

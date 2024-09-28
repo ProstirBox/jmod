@@ -1,6 +1,8 @@
 ﻿SWEP.Base = "wep_jack_gmod_gunbase"
 SWEP.PrintName = "Flintlock Blunderbuss"
-JMod.SetWepSelectIcon(SWEP, "entities/ent_jack_gmod_ezweapon_flb", true)
+SWEP.IconOverride = "materials/entities/ent_jack_gmod_ezweapon_flb.png"
+SWEP.Spawnable = true
+SWEP.Category = "JMod - EZ Weapons"
 SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/blunder/c_blunder.mdl"
 SWEP.WorldModel = "models/weapons/blunder/blunder.mdl"
