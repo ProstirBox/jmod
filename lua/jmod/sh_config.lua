@@ -157,6 +157,24 @@ function JMod.InitGlobalConfig(forceNew, configToApply)
 						{"RAND", JMod.ArmorTable["GasMask"].ent, JMod.ArmorTable["BallisticMask"].ent, JMod.ArmorTable["NightVisionGoggles"].ent, JMod.ArmorTable["ThermalGoggles"].ent, JMod.ArmorTable["Respirator"].ent, JMod.ArmorTable["Light-Helmet"].ent, JMod.ArmorTable["Medium-Helmet"].ent, JMod.ArmorTable["Heavy-Helmet"].ent, JMod.ArmorTable["Riot-Helmet"].ent, JMod.ArmorTable["Heavy-Riot-Helmet"].ent, JMod.ArmorTable["Ultra-Heavy-Helmet"].ent, JMod.ArmorTable["Metal Bucket"].ent, JMod.ArmorTable["Metal Pot"].ent, JMod.ArmorTable["Ceramic Pot"].ent, JMod.ArmorTable["Traffic Cone"].ent, JMod.ArmorTable["Light-Vest"].ent, JMod.ArmorTable["Medium-Light-Vest"].ent, JMod.ArmorTable["Medium-Vest"].ent, JMod.ArmorTable["Medium-Heavy-Vest"].ent, JMod.ArmorTable["Heavy-Vest"].ent, JMod.ArmorTable["Pelvis-Panel"].ent, JMod.ArmorTable["Light-Left-Shoulder"].ent, JMod.ArmorTable["Heavy-Left-Shoulder"].ent, JMod.ArmorTable["Light-Right-Shoulder"].ent, JMod.ArmorTable["Heavy-Right-Shoulder"].ent, JMod.ArmorTable["Left-Forearm"].ent, JMod.ArmorTable["Right-Forearm"].ent, JMod.ArmorTable["Light-Left-Thigh"].ent, JMod.ArmorTable["Heavy-Left-Thigh"].ent, JMod.ArmorTable["Light-Right-Thigh"].ent, JMod.ArmorTable["Heavy-Right-Thigh"].ent, JMod.ArmorTable["Left-Calf"].ent, JMod.ArmorTable["Right-Calf"].ent, JMod.ArmorTable["Hazmat Suit"].ent, 6}
 					}
 				},
+				["juggernuts"] = {
+					description = "Heavy collection of armor.",
+					category = "Apparel",
+					results = {
+						{JMod.ArmorTable["GasMask"].ent, 				 
+						JMod.ArmorTable["Ultra-Heavy-Helmet"].ent, 
+						JMod.ArmorTable["Heavy-Vest"].ent, 
+						JMod.ArmorTable["Pelvis-Panel"].ent, 
+						JMod.ArmorTable["Heavy-Left-Shoulder"].ent, 
+						JMod.ArmorTable["Heavy-Right-Shoulder"].ent, 
+						JMod.ArmorTable["Left-Forearm"].ent, 
+						JMod.ArmorTable["Right-Forearm"].ent, 
+						JMod.ArmorTable["Heavy-Left-Thigh"].ent, 
+						JMod.ArmorTable["Heavy-Right-Thigh"].ent, 
+						JMod.ArmorTable["Left-Calf"].ent, 
+						JMod.ArmorTable["Right-Calf"].ent, 12}
+					}
+				},
 				["crossbow"] = {
 					description = "A crossbow and 2 boxes of arrows, enjoy.",
 					category = "Weapons",
@@ -269,11 +287,11 @@ function JMod.InitGlobalConfig(forceNew, configToApply)
 						{"ent_jack_gmod_ezgas", 3}
 					}
 				},
-				["toolboxes"] = {
-					description = "Two toolboxes for crafting, nailing, salvaging and packaging items. ",
-					category = "Tools",
+				["fissile material"] = {
+					description = "Boom boom material.",
+					category = "Resources",
 					results = {
-						{"ent_jack_gmod_eztoolbox", 2}
+						{"ent_jack_gmod_ezfissilematerial", 1}
 					}
 				},
 				["rations"] = {
@@ -702,7 +720,7 @@ function JMod.InitGlobalConfig(forceNew, configToApply)
 					}
 				},
 			},
-			RestrictedPackages = {"antimatter", "bioweapon canister"},
+			RestrictedPackages = {"antimatter", "bioweapon canister", "fissile material"},
 			RestrictedPackageShipTime = 600,
 			RestrictedPackagesAllowed = true
 		},
@@ -1141,6 +1159,41 @@ function JMod.InitGlobalConfig(forceNew, configToApply)
 				craftingType = "toolbox",
 				description = "Takes a couple minutes to spin up, and then creates an impossibly weak black hole that scales with time."
 			},
+			["EZ TeleNade"] = {
+				results = "ent_aboot_gmod_eztelenade",
+				craftingReqs = {
+					[JMod.EZ_RESOURCE_TYPES.ADVANCEDPARTS] = 5,
+					[JMod.EZ_RESOURCE_TYPES.PRECISIONPARTS] = 10,
+					[JMod.EZ_RESOURCE_TYPES.POWER] = 5,
+					[JMod.EZ_RESOURCE_TYPES.ANTIMATTER] = 10
+				},
+				sizeScale = 2,
+				category = "HL2",
+				craftingType = "workbench",
+				description = "Takes a couple minutes to spin up, and then creates an impossibly weak black hole that scales with time."
+			},
+			["EZ Shipping Container"] = {
+				results = "ent_aboot_gmod_ezshippingcontainer",
+				craftingReqs = {
+				[JMod.EZ_RESOURCE_TYPES.STEEL] = 200,
+				},
+				sizeScale = 2,
+				category = "HL2",
+				craftingType = "toolbox",
+				description = "Container"
+			},
+			["EZ Copter Bomb"] = {
+				results = "ent_aboot_gmod_ezhelibomb",
+				craftingReqs = {
+					[JMod.EZ_RESOURCE_TYPES.PRECISIONPARTS] = 25,
+					[JMod.EZ_RESOURCE_TYPES.EXPLOSIVES] = 250,
+					[JMod.EZ_RESOURCE_TYPES.BASICPARTS] = 100
+				},
+				sizeScale = 2,
+				category = "HL2",
+				craftingType = "toolbox",
+				description = "Combine heli bomb."
+			},
 			["EZ Micro Nuclear Bomb"] = {
 				results = "ent_jack_gmod_eznuke",
 				craftingReqs = {
@@ -1427,6 +1480,49 @@ function JMod.InitGlobalConfig(forceNew, configToApply)
 				category = "Other",
 				craftingType = "toolbox",
 				description = "The good ship mud skipper."
+			},
+			["EZ Jump Module"] = {
+				results = "ent_aboot_gmod_ezarmor_jumpmodule_admin",
+				craftingReqs = {
+					[JMod.EZ_RESOURCE_TYPES.PRECISIONPARTS] = 40,
+					[JMod.EZ_RESOURCE_TYPES.STEEL] = 40,
+					[JMod.EZ_RESOURCE_TYPES.ALUMINUM] = 15,
+					[JMod.EZ_RESOURCE_TYPES.GLASS] = 10,
+					[JMod.EZ_RESOURCE_TYPES.COPPER] = 30,
+					[JMod.EZ_RESOURCE_TYPES.GOLD] = 10,
+					[JMod.EZ_RESOURCE_TYPES.PROPELLANT] = 75
+				},
+				category = "Other",
+				craftingType = "toolbox",
+				description = "Latest peek of technology. Allows user to jump really high! (On short distances)."
+			},
+			["EZ Super Combine Suit"] = {
+				results = "ent_aboot_gmod_ezarmor_combinesuit",
+				craftingReqs = {
+					[JMod.EZ_RESOURCE_TYPES.STEEL] = 50,
+					[JMod.EZ_RESOURCE_TYPES.ALUMINUM] = 20,
+					[JMod.EZ_RESOURCE_TYPES.PLASTIC] = 10,
+					[JMod.EZ_RESOURCE_TYPES.GLASS] = 10,
+					[JMod.EZ_RESOURCE_TYPES.COPPER] = 30,
+					[JMod.EZ_RESOURCE_TYPES.GOLD] = 10,
+				},
+				category = "Other",
+				craftingType = "toolbox",
+				description = "Great defesnive armor straight from our combine partners."
+			},
+			["EZ HEV Suit"] = {
+				results = "ent_aboot_gmod_ezarmor_hev",
+				craftingReqs = {
+					[JMod.EZ_RESOURCE_TYPES.STEEL] = 50,
+					[JMod.EZ_RESOURCE_TYPES.ALUMINUM] = 20,
+					[JMod.EZ_RESOURCE_TYPES.PLASTIC] = 10,
+					[JMod.EZ_RESOURCE_TYPES.GLASS] = 10,
+					[JMod.EZ_RESOURCE_TYPES.COPPER] = 30,
+					[JMod.EZ_RESOURCE_TYPES.GOLD] = 10,
+				},
+				category = "Other",
+				craftingType = "toolbox",
+				description = "Great defesnive armor straight from our rebel partners."
 			},
 			["EZ Basic Parts, x50"] = {
 				results = {"ent_jack_gmod_ezbasicparts", 1, 50},

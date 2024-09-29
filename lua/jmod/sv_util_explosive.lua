@@ -1,4 +1,3 @@
-
 function JMod.FragSplosion(shooter, origin, fragNum, fragDmg, fragMaxDist, attacker, direction, spread, zReduction)
 	-- fragmentation/shrapnel simulation
 	local Eff = EffectData()
@@ -68,7 +67,7 @@ function JMod.FragSplosion(shooter, origin, fragNum, fragDmg, fragMaxDist, attac
 
 				local firer = (IsValid(shooter) and shooter) or game.GetWorld()
 
-				local DistFactor = (-Tr.Fraction + 1.2)^2
+				local DistFactor = (-Tr.Fraction + 1.2) ^ 2
 				local DamageToDeal = fragDmg * DmgMul * DistFactor
 				if DamageToDeal >= 1 then
 					firer:FireBullets({
@@ -185,21 +184,20 @@ function JMod.WreckBuildings(blaster, pos, power, range, ignoreVisChecks)
 					proceed = IsValid(tr.Entity) and (tr.Entity == prop)
 				end
 
-				if proceed then
-					if mass <= myDestroyThreshold then
-						if (DistFrac >= .9) and string.find(physObj:GetMaterial(), "metal") then
-							timer.Simple(.1, function()
-								JMod.FragSplosion(blaster, propPos, mass * 10, 100, maxRange * 100, game.GetWorld(), (propPos - pos):GetNormalized(), DistFrac)
-							end)
-						end
-						SafeRemoveEntity(prop)
-					elseif mass <= myLoosenThreshold then
-						physObj:EnableMotion(true)
-						constraint.RemoveAll(prop)
-						physObj:ApplyForceOffset((propPos - pos):GetNormalized() * 1000 * DistFrac * power * mass, propPos + VectorRand() * 10)
-					else
-						physObj:ApplyForceOffset((propPos - pos):GetNormalized() * 200 * DistFrac * origPower * mass, propPos + VectorRand() * 10)
+				if not proceed then continue end
+				if mass <= myDestroyThreshold then
+					if (DistFrac >= .9) and string.find(physObj:GetMaterial(), "metal") then
+						timer.Simple(.1, function()
+							JMod.FragSplosion(blaster, propPos, mass * 10, 100, maxRange * 100, game.GetWorld(), (propPos - pos):GetNormalized(), DistFrac)
+						end)
 					end
+					SafeRemoveEntity(prop)
+				elseif mass <= myLoosenThreshold then
+					physObj:EnableMotion(true)
+					constraint.RemoveAll(prop)
+					physObj:ApplyForceOffset((propPos - pos):GetNormalized() * 1000 * DistFrac * power * mass, propPos + VectorRand() * 10)
+				else
+					physObj:ApplyForceOffset((propPos - pos):GetNormalized() * 200 * DistFrac * origPower * mass, propPos + VectorRand() * 10)
 				end
 			end
 		end
